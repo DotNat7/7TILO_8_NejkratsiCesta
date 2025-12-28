@@ -1,0 +1,81 @@
+public class Main {
+    public static void main(String[] args) {
+        GraphSolver solver = new GraphSolver();
+
+        solver.addEdge("PRG", "BRE", 500.63, "km");
+        solver.addEdge("PRG", "LHR", 1044.93, "km");
+        solver.addEdge("PRG", "RSW", 8184.96, "km");
+        solver.addEdge("LHR", "PRG", 1044.93, "km");
+        solver.addEdge("LHR", "PEK", 8156.63, "km");
+        solver.addEdge("BRE", "WAW", 827.53, "km");
+        solver.addEdge("JFK", "RSW", 1076.52, "mi");
+        solver.addEdge("JFK", "PEK", 10981.67, "km");
+        solver.addEdge("JFK", "BFI", 2414.55, "mi");
+        solver.addEdge("RSW", "PRG", 8184.96, "km");
+        solver.addEdge("RSW", "WAW", 5293.15, "mi");
+        solver.addEdge("RSW", "JFK", 1076.52, "mi");
+        solver.addEdge("WAW", "BRE", 827.53, "km");
+        solver.addEdge("WAW", "RSW", 5293.15, "mi");
+        solver.addEdge("WAW", "BFI", 8396.55, "km");
+        solver.addEdge("WAW", "DME", 1166.9, "km");
+        solver.addEdge("DUB", "LHR", 279.24, "mi");
+        solver.addEdge("DUB", "KEF", 1499.44, "km");
+        solver.addEdge("PEK", "JFK", 10981.67, "km");
+        solver.addEdge("PEK", "OKA", 1851.41, "km");
+        solver.addEdge("PEK", "CKG", 1464.84, "km");
+        solver.addEdge("OKA", "PEK", 1851.41, "km");
+        solver.addEdge("OKA", "HND", 1553.67, "km");
+        solver.addEdge("BFI", "HND", 4790.84, "mi");
+        solver.addEdge("FNJ", "PEK", 783.06, "km");
+        solver.addEdge("CKG", "FNJ", 2032.71, "km");
+        solver.addEdge("CKG", "AWP", 6503.89, "km");
+        solver.addEdge("HND", "BFI", 4790.84, "mi");
+        solver.addEdge("HND", "OKA", 1553.67, "km");
+        solver.addEdge("HND", "DME", 7502.07, "km");
+        solver.addEdge("HND", "AWP", 6237.99, "km");
+        solver.addEdge("DME", "WAW", 1166.9, "km");
+        solver.addEdge("DME", "HND", 7502.07, "km");
+        solver.addEdge("DME", "EVX", 2565.34, "km");
+        solver.addEdge("KEF", "DUB", 1499.44, "km");
+        solver.addEdge("KEF", "DEL", 7631.91, "km");
+        solver.addEdge("KEF", "AWP", 14966.36, "km");
+        solver.addEdge("KEF", "CAI", 5300.37, "km");
+        solver.addEdge("AWP", "HND", 6237.99, "km");
+        solver.addEdge("AWP", "CKG", 6503.89, "km");
+        solver.addEdge("AWP", "EVX", 15043.41, "km");
+        solver.addEdge("AWP", "DEL", 8493.96, "km");
+        solver.addEdge("AWP", "DME", 12489.43, "km");
+        solver.addEdge("DEL", "AWP", 8493.96, "km");
+        solver.addEdge("DEL", "EVX", 6662.77, "km");
+        solver.addEdge("DEL", "KEF", 7631.91, "km");
+        solver.addEdge("EVX", "DME", 2565.34, "km");
+        solver.addEdge("EVX", "AWP", 15043.41, "km");
+        solver.addEdge("EVX", "DEL", 6662.77, "km");
+        solver.addEdge("EVX", "PAK", 5835.67, "km");
+        solver.addEdge("CAI", "PAK", 3127.3, "km");
+        solver.addEdge("CAI", "DEL", 4403.07, "km");
+        solver.addEdge("PAK", "EVX", 5835.67, "km");
+        solver.addEdge("PAK", "CAI", 3127.3, "km");
+
+
+        System.out.println(" ");
+        solver.solveDijkstra("PRG", "DEL", "Prague - Ruzyne International Airport -> Indira Gandhi International Airport");
+        solver.solveAStar("PRG", "DEL", "Prague - Ruzyne International Airport -> Indira Gandhi International Airpor");
+        System.out.println("-".repeat(30));
+        System.out.println(" ");
+        solver.solveDijkstra("BRE", "FNJ", "Bremen Airport -> Sunan International Airport");
+        solver.solveAStar("BRE", "FNJ", "Bremen Airport -> Sunan International Airport");
+        System.out.println("-".repeat(30));
+        System.out.println(" ");
+        solver.solveDijkstra("JFK", "CAI", "John F Kennedy International Airport -> Cairo International Airport");
+        solver.solveAStar("JFK", "CAI", "John F Kennedy International Airport -> Cairo International Airport");
+        System.out.println("-".repeat(30));
+        System.out.println(" ");
+        solver.solveDijkstra("DUB", "DME", "Dublin Airport -> Domodedovo Airport");
+        solver.solveAStar("DUB", "DME", "Dublin Airport -> Domodedovo Airport");
+        System.out.println("-".repeat(30));
+        System.out.println(" ");
+        solver.solveDijkstra("OKA", "EVX", "Naha Airport -> Evreux Airport");
+        solver.solveAStar("OKA", "EVX", "Naha Airport -> Evreux Airport");
+    }
+}
