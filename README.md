@@ -1,0 +1,1 @@
+V implementaci algoritmu A* byla zvolena heuristika $h(n) = 0$, protože v zadání chyběly zeměpisné souřadnice pro výpočet reálné vzdušné vzdálenosti. V tomto konkrétním nastavení se A* chová matematicky stejně jako Dijkstra.
